@@ -1,0 +1,34 @@
+******Installation of Geth ( run this to check if geth is installed or not=> geth version) ******
+If geth is not installed follow these steps
+http://geth.Ethereum.org/downloads/
+download and install this( Geth 1.10.13 ) version for windows
+**************************************************
+
+1)mkdir chaindata
+2)geth --datadir chaindata init genesis.json
+3)geth --datadir=./chaindata/
+4)geth attach ipc:\\.\pipe\geth.ipc
+5)personal.newAccount()
+pass:abcd
+"0x540bf2e22b013ffe544845befbe1ea747f04d584"
+6)eth.accounts    //How many accounts
+7)eth.coinbase   //Main Account
+8)eth.getBalance(eth.accounts[0])	//get balance of account
+9)miner.start()	//start mining
+10)personal.newAccount()
+pass:1234
+"0xbf47e53e8a9449082328a07361b3bb1c60d9fde1"
+11) eth.getBalance(eth.accounts[1])
+12)personal.unlockAccount(eth.accounts[0])	//unlock account
+13) eth.sendTransaction({from:eth.coinbase,to:eth.accounts[1],value:web3.toWei(10,"ether")})	//send ether
+14) eth.getBalance(eth.accounts[1])	//check balance of 2nd account
+	10000000000000000000
+15)  eth.getBalance(eth.accounts[0])	//balance of 1st account
+       2.41e+21
+16)  miner.stop()
+17)  web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")	//balance in ether
+	10
+18)  web3.fromWei(eth.getBalance(eth.accounts[0]),"ether")
+	3105
+19) eth.getBlock("latest")	//get details of latest block
+20) eth.getBlock(35)		//get details of specific block

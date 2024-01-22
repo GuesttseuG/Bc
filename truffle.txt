@@ -1,0 +1,122 @@
+◉ You can see if you have node already installed by going to your terminal and
+typing: node –v
+Otherwise, Download from: URL: https://nodejs.org/en/
+
+◉ npm install -g truffle // install truffle on windows
+
+*********************************************************************
+paste folder and inside folder run following commands
+
+Microsoft Windows [Version 10.0.22631.3007]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\truffle>truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\MyContract.sol
+> Artifacts written to C:\truffle\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+C:\truffle>truffle migrate
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_win32_ia32_115.node'
+Require stack:
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\ganache\node_modules\@trufflesuite\uws-js-unofficial\src\uws.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\ganache\dist\node\core.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\build\migrate.bundled.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\original-require\index.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\build\cli.bundled.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\MyContract.sol
+> Artifacts written to C:\truffle\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'MyContract'
+   ----------------------
+   > transaction hash:    0x9e9f7dac2fd6369ba45a5d0a264ce8ad6023728fdd63e7febc432df6658c00f3
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xb8Bc70A2bd1aF8E1CB6B281085Bacb39Eb5D2b52
+   > block number:        1
+   > block timestamp:     1705943366
+   > account:             0x3b89AC8942BEd127D9EFf08022613998e1433eDd
+   > balance:             99.9992013805
+   > gas used:            236628 (0x39c54)
+   > gas price:           3.375 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0007986195 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:        0.0007986195 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.0007986195 ETH
+
+
+
+C:\truffle>truffle console
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_win32_ia32_115.node'
+Require stack:
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\ganache\node_modules\@trufflesuite\uws-js-unofficial\src\uws.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\ganache\dist\node\core.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\build\console.bundled.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\node_modules\original-require\index.js
+- C:\Users\abhis\AppData\Roaming\npm\node_modules\truffle\build\cli.bundled.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+truffle(development)> MyContract.deployed().then((instance) => { app = instance } )
+undefined
+truffle(development)> app.get()
+'myValue'
+truffle(development)> app.set('New Value')
+{
+  tx: '0x776155c2aa2f76776f33c40c677a769f1b4e9edd2171d371a7d87751a00f1854',
+  receipt: {
+    transactionHash: '0x776155c2aa2f76776f33c40c677a769f1b4e9edd2171d371a7d87751a00f1854',
+    transactionIndex: 0,
+    blockNumber: 2,
+    blockHash: '0x5cd68f1ae90153fb4ac7821e84fc16022eb09e65c71fb82ecf2eedc6f0f51bbe',
+    from: '0x3b89ac8942bed127d9eff08022613998e1433edd',
+    to: '0xb8bc70a2bd1af8e1cb6b281085bacb39eb5d2b52',
+    cumulativeGasUsed: 29654,
+    gasUsed: 29654,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 3273325473,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+truffle(development)> app.get()
+'New Value'
+truffle(development)>exit
