@@ -4,22 +4,22 @@
 1. Write a program to implement symmetric encryption using Ceaser Cipher algorithm.
 def encrypt(text,s):
     result = ""
-    for i in range(len(text)):
+    for i in range (len(text)):
         char = text[i]
-        if (char == " "):
-            result += " "
+        if(char==" "):
+            result += " ";
         else:
-            if (char.isupper()):
-                result += chr((ord(char) + s - 65) % 26 + 65)
+            if(char.isupper()):
+                result += chr((ord(char) + s-65) % 26 + 65)
             else:
-                result += chr((ord(char) + s - 97) % 26 + 97)
+                result += chr((ord(char)+ s-97) % 25 + 97)
     return result
-print("CEASER CIPHER DEMO")
-text = input("Enter text to encrypt : ")
-s = int(input("Enter shift pattern : "))
-print("Plain Text : " + text)
-print("Shift Pattern : " + str(s))
-print("Cipher Text : " + encrypt(text, s))
+print("CEASER CIPER DEMO")
+text = input("Enter text to encrypt: ")
+s = 4
+print("Plain Text: " + text)
+print("Shift patter: " + str(s))
+print("Cipher: " + encrypt(text,s))
  
  
    
